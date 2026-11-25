@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#0b0b0e"><title>AHNAF MODS V9</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b0b0e;color:#f5f5f6;font:13px/1.4 Arial,sans-serif}
+.wrap{height:100vh;display:flex;flex-direction:column;border:1px solid #54202b;border-radius:13px;overflow:hidden;background:linear-gradient(145deg,#171419,#0c0d11)}
+header{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 13px;background:#171116;border-bottom:1px solid #3b2229}
+.brand{display:flex;align-items:center;gap:9px}.logo{width:34px;height:34px;object-fit:contain}.name{font-weight:900;letter-spacing:1px}.name span{color:#ff405d}.sub{font-size:9px;color:#9b8990;letter-spacing:1.5px;margin-top:2px}
+.close{border:0;background:#2b151d;color:#ff7184;border-radius:7px;width:30px;height:30px;font-size:18px}
+.nav{display:flex;gap:5px;padding:9px;background:#101116;border-bottom:1px solid #28232a}.nav button{flex:1;border:0;border-radius:7px;padding:9px 2px;background:#1a1b21;color:#9b9da5;font-size:10px;font-weight:bold}.nav button.active{background:#6e1d30;color:white}
+main{padding:10px;overflow:auto;flex:1}.heading{font-size:10px;letter-spacing:1.4px;color:#ff6479;font-weight:bold;margin:4px 2px 8px}.group{border:1px solid #302a31;border-radius:9px;overflow:hidden;background:#14151a;margin-bottom:12px}
+.item{min-height:49px;display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-bottom:1px solid #29252c}.item:last-child{border:0}.left{display:flex;align-items:center;gap:9px}.ico{width:27px;height:27px;border-radius:7px;background:#321923;display:grid;place-items:center;color:#ff6a80;font-weight:bold}.label{font-size:11px;font-weight:bold}.desc{font-size:9px;color:#85838d;margin-top:2px}
+.switch{width:34px;height:19px;border:0;border-radius:20px;background:#3b3b43;padding:2px}.switch:after{content:"";display:block;width:15px;height:15px;background:#aaa;border-radius:50%}.switch.on{background:#a92340}.switch.on:after{transform:translateX(15px);background:#fff}
+.slider{padding:11px;border-bottom:1px solid #29252c}.slider:last-child{border:0}.srow{display:flex;justify-content:space-between;font-size:10px;margin-bottom:8px}output{color:#ff6b80}input{width:100%;accent-color:#ed3453}
+.select{display:flex;align-items:center;justify-content:space-between;padding:11px;border-bottom:1px solid #29252c;font-size:10px}.select:last-child{border:0}select{background:#29252d;color:#eee;border:1px solid #49404a;border-radius:5px;padding:5px;font-size:10px}
+footer{padding:9px;background:#111116;border-top:1px solid #30262e;display:flex;gap:8px}.foot{flex:1;border:1px solid #9b2b43;background:#3a1823;color:#ff9aaa;border-radius:7px;padding:10px;font-weight:bold;font-size:10px}.foot.exit{background:#b51e3d;color:white;border-color:#e54863}
+.page{display:none}.page.active{display:block}
+</style></head><body>
+<div class="wrap">
+<header><div class="brand"><img class="logo" src="assets/images/logo.png" onerror="this.style.display='none'"><div><div class="name">AHNAF MODS <span>V9</span></div><div class="sub">ADVANCED CONTROL PANEL</div></div></div><button class="close" onclick="closeMenu()">×</button></header>
+<nav class="nav"><button class="active" data-page="combat">COMBAT</button><button data-page="visual">VISUAL</button><button data-page="tuning">TUNING</button><button data-page="helper">HELPER</button></nav>
+<main>
+<section class="page active" id="combat">
+<div class="heading">COMBAT SETTINGS</div><div class="group">
+<div class="item"><div class="left"><div class="ico">◎</div><div><div class="label">Aimbot</div><div class="desc">Control toggle</div></div></div><button class="switch"></button></div>
+<div class="item"><div class="left"><div class="ico">⌖</div><div><div class="label">Aimlock</div><div class="desc">Target lock indicator</div></div></div><button class="switch"></button></div>
+<div class="item"><div class="left"><div class="ico">◉</div><div><div class="label">Aim FOV</div><div class="desc">FOV ring display setting</div></div></div><button class="switch on"></button></div>
+<div class="item"><div class="left"><div class="ico">⌁</div><div><div class="label">Recoil Control</div><div class="desc">Profile control</div></div></div><button class="switch"></button></div>
+</div>
+<div class="heading">AIM PARAMETERS</div><div class="group">
+<div class="slider"><div class="srow"><b>FOV SIZE</b><output>120</output></div><input type="range" min="40" max="260" value="120"></div>
+<div class="select"><b>Aim target</b><select><option>Head</option><option>Neck</option><option>Body</option></select></div>
+</div></section>
+<section class="page" id="visual"><div class="heading">VISUAL SETTINGS</div><div class="group">
+<div class="item"><div class="left"><div class="ico">▣</div><div><div class="label">ESP</div><div class="desc">Visual setting</div></div></div><button class="switch"></button></div>
+<div class="item"><div class="left"><div class="ico">⌗</div><div><div class="label">ESP Draw</div><div class="desc">Box display setting</div></div></div><button class="switch"></button></div>
+<div class="item"><div class="left"><div class="ico">↗</div><div><div class="label">ESP Lines</div><div class="desc">Line display setting</div></div></div><button class="switch"></button></div>
+<div class="item"><div class="left"><div class="ico">♥</div><div><div class="label">Health Bar</div><div class="desc">Status indicator</div></div></div><button class="switch"></button></div>
+</div><div class="heading">DISPLAY STYLE</div><div class="group"><div class="select"><b>Box style</b><select><option>Corner</option><option>Full box</option></select></div><div class="select"><b>Color</b><select><option>Crimson</option><option>Cyan</option><option>Green</option></select></div></div></section>
+<section class="page" id="tuning"><div class="heading">SENSITIVITY</div><div class="group">
+<div class="slider"><div class="srow"><b>GENERAL</b><output>95</output></div><input type="range" min="0" max="100" value="95"></div>
+<div class="slider"><div class="srow"><b>RED DOT</b><output>90</output></div><input type="range" min="0" max="100" value="90"></div>
+<div class="slider"><div class="srow"><b>2X SCOPE</b><output>85</output></div><input type="range" min="0" max="100" value="85"></div>
+<div class="slider"><div class="srow"><b>4X SCOPE</b><output>80</output></div><input type="range" min="0" max="100" value="80"></div>
+</div><div class="heading">PROFILE</div><div class="group"><div class="select"><b>Preset</b><select><option>Balanced</option><option>Precision</option><option>Fast Response</option></select></div></div></section>
+<section class="page" id="helper"><div class="heading">DEVICE HELPER</div><div class="group">
+<div class="item"><div><div class="label">Panel frame rate</div><div class="desc">Current WebView rendering rate</div></div><b id="fps">--</b></div>
+<div class="item"><div><div class="label">Network</div><div class="desc">Device connection status</div></div><b id="net">--</b></div>
+<div class="item"><div><div class="label">Battery</div><div class="desc">If Android WebView exposes it</div></div><b id="bat">--</b></div>
+</div><div class="heading">PERFORMANCE PROFILE</div><div class="group"><div class="select"><b>Preset</b><select id="perf"><option>Balanced</option><option>Performance</option><option>Battery Saver</option></select></div></div></section>
+</main>
+<footer><button class="foot" onclick="hideMenu()">HIDE</button><button class="foot exit" onclick="closeMenu()">CLOSE</button></footer>
+</div>
+<script>
+function toast(m){if(window.Android&&Android.showToast)Android.showToast(m)}
+function hideMenu(){if(window.Android&&Android.hideMenu)Android.hideMenu()}
+function closeMenu(){if(window.Android&&Android.closeMenu)Android.closeMenu()}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===b.dataset.page))});
+document.querySelectorAll('.switch').forEach(s=>s.onclick=()=>{s.classList.toggle('on');toast((s.parentElement.querySelector('.label')?.textContent||'Setting')+(s.classList.contains('on')?' enabled':' disabled'))});
+document.querySelectorAll('input[type=range]').forEach(r=>r.oninput=()=>r.parentElement.querySelector('output').value=r.value);
+document.getElementById('net').textContent=navigator.onLine?'ONLINE':'OFFLINE';
+window.addEventListener('online',()=>document.getElementById('net').textContent='ONLINE');
+window.addEventListener('offline',()=>document.getElementById('net').textContent='OFFLINE');
+if(navigator.getBattery)navigator.getBattery().then(b=>{let paint=()=>document.getElementById('bat').textContent=Math.round(b.level*100)+'%';paint();b.onlevelchange=paint}).catch(()=>{});
+let n=0,t=performance.now();function frame(now){n++;if(now-t>1000){document.getElementById('fps').textContent=Math.round(n*1000/(now-t))+' FPS';n=0;t=now}requestAnimationFrame(frame)}requestAnimationFrame(frame);
+document.getElementById('perf').onchange=e=>toast('Profile: '+e.target.value);
+</script></body></html>
